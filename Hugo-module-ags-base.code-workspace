@@ -1,8 +1,160 @@
 {
-	"folders": [
-		{
-			"path": "."
-		}
-	],
-	"settings": {}
+  "folders": [
+    {
+      "path": ".",
+    },
+  ],
+  "settings": {
+    "markdown-pdf.outputDirectory": "pdf-output",
+    "markdown-pdf.outputDirectoryRelativePathFile": false,
+    "markdown-pdf.styles": [
+      "pdf-output/markdown-pdf.css",
+      //"https://cdn.jsdelivr.net/gh/Dracula/dracula-theme@master/css/dracula.css",
+      //"https://cdn.jsdelivr.net/gh/Dracula/dracula-theme@master/css/dracula.css"
+    ],
+    "markdown-pdf.margin.left": "20mm",
+    "markdown-pdf.margin.bottom": "15mm",
+    "markdown-pdf.margin.right": "10mm",
+    "markdown-pdf.margin.top": "15mm",
+    "markdown-pdf.executablePath": "/usr/bin/google-chrome",
+    // Custom header and footer
+    "markdown-pdf.headerTemplate": "<div style=\"font-size: 9px; margin-left: 25.4mm;text-align:center;color:lightgrey\"> <span>Candidate Name: Sulaiman Ahmed Sayyed</span></div> <div style=\"font-size: 9px; margin-left: auto; margin-right: 50mm;color:lightgrey\">Candidate Number:</div>",
+    "markdown-pdf.footerTemplate": "<div style=\"font-size: 9px; margin: 0 auto;\">Page <span class='pageNumber'></span> of <span class='totalPages'></span></div>",
+    // Mermaid settings
+    "markdown-pdf.mermaidServer": "https://unpkg.com/mermaid@9.4.3/dist/mermaid.min.js",
+    //Workbench color customization
+    "workbench.colorCustomizations": {
+      "editor.lineHighlightBackground": "#2f3036",
+      "editor.lineHighlightBorder": "#7d807b",
+      "editorCursor.foreground": "#FF5733", // Replace with your desired color code
+      "editorCursor.background": "#FFFFFF", // Optional for block cursors
+      "editorWhitespace.foreground": "#615e5e",
+    },
+    // To open new editor in a new group
+    "workbench.editor.splitInGroupLayout": "horizontal",
+    "workbench.colorTheme": "Dracula Theme",
+    // Other settings
+    "editor.fontFamily": "'MesloLGS Nerd Font', 'Fira Code'",
+    "editor.fontLigatures": true,
+    "editor.fontSize": 14,
+    "editor.lineHeight": 24,
+    "editor.letterSpacing": 0.5,
+    "editor.cursorBlinking": "blink",
+    "editor.cursorSmoothCaretAnimation": "on",
+    "editor.cursorStyle": "line",
+    "editor.cursorWidth": 2,
+    "editor.renderControlCharacters": true,
+    "editor.renderLineHighlight": "all",
+    "editor.renderWhitespace": "all",
+    "editor.rulers": [80, 120],
+    "editor.tabSize": 2,
+    "editor.wordWrap": "on",
+    "editor.wrappingIndent": "same",
+    "editor.minimap.enabled": false,
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": true,
+    "editor.formatOnType": true,
+    "editor.showFoldingControls": "always",
+    "editor.guides.indentation": true,
+    // Terminal settings
+    "terminal.integrated.shellIntegration.enabled": true,
+    "terminal.integrated.shellIntegration.decorationsEnabled": "both",
+    "terminal.integrated.shellIntegration.showCommandGuide": true,
+    "terminal.integrated.stickyScroll.enabled": true,
+    "terminal.integrated.gpuAcceleration": "auto",
+    "terminal.integrated.minimumContrastRatio": 1,
+    /*
+    ToDo Tree
+    */
+    "todo-tree.regex.regex": "((//|#|<!--|;|/\\*|^)\\s*($TAGS)|^//\\s*\\[x\\]|^//\\s*\\[ \\])",
+    "todo-tree.general.tags": [
+      "BUG",
+      "HACK",
+      "FIXME",
+      "TODO",
+      "XXX",
+      "[ ]",
+      "[x]",
+      "[//]",
+      // "- [ ]",
+      "[//]:",
+      "[//]: ",
+      "[//]: #",
+      "[//]: # '",
+      "[//]: # '!",
+      "[//]: # '?",
+      //'$TAGS'",
+    ],
+    "todo-tree.highlights.customHighlight": {
+      "[ ]": {
+        "foreground": "#f44336",
+        "background": "#592c2c",
+      },
+      "[x]": {
+        "foreground": "#64dd17",
+        "background": "#008800",
+      },
+      "[//]": {
+        "foreground": "#3688f4",
+        "background": "#54592c",
+      },
+      // "- [ ]": {
+      // 	"foreground": "#4124ac",
+      // 	"background": "#9ba07a",
+      //	},
+      "[//]: ": {
+        "foreground": "#c3d89b",
+        "background": "#753f77",
+      },
+      "[//]: #": {
+        "type": "text",
+        "foreground": "#474e3b",
+        "background": "#080f0d",
+      },
+      "[//]: # '": {
+        "icon": "tools",
+        "type": "text-and-comment",
+        "foreground": "#918887",
+        "background": "#1d2147",
+      },
+      "[//]: # '!": {
+        "icons": "bell",
+        "type": "text-and-comment",
+        "foreground": "#f51d05",
+        "background": "#1d2147",
+      },
+      "[//]: # '?": {
+        "icon": "question",
+        "type": "text-and-comment",
+        "foreground": "#3d8b51",
+        "background": "#272a41",
+      },
+      //"\\[//\\]: # \\((.*?)\\)": {
+      //empty
+    },
+    "todo-tree.filtering.excludeGlobs": [
+      "**/vendor/**",
+      "**/node_modules/**",
+      "**/dist/**",
+      "**/bower_components/**",
+      "**/build/**",
+      "**/.vscode/**",
+      "**/.github/**",
+      "**/_output/**",
+      "**/*.min.*",
+      "**/*.map",
+    ],
+    "editor.tokenColorCustomizations": {
+      "[Dracula Theme]": {
+        "textMateRules": [
+          {
+            "scope": "comment.block.documentation.markdown",
+            "settings": {
+              "foreground": "#382e33", // Replace with your desired color
+            },
+          },
+        ],
+      },
+    },
+  },
 }

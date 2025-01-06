@@ -190,17 +190,13 @@ image_height = 240
     }
   ]
 }
+```
 
-
-
-[//]: # (Done!)
-
-
----
-
-[//]: # (! Start from this point)
+[//]: # ' The above is done'
 
 ### Example: Creating a Shortcode
+
+[//]: # ' Start your work here'
 
 Let's create a simple shortcode that displays an alert message.
 
@@ -208,7 +204,7 @@ Let's create a simple shortcode that displays an alert message.
 
 - Create the file `layouts/shortcodes/ags/base/alert.html`:
 
-```html
+```gotml
 <div class="alert alert-{{ .Get "type" | default "info" }}">
     {{ .Inner | markdownify }}
 </div>
