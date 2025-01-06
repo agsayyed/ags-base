@@ -1,0 +1,16 @@
+{
+    "name": "hugo-base-module",
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/agsayyed/ags-base.git"
+    },
+    "author": "Abdul Sayyed <s.ghafoor@outlook.com>",
+    "license": "MIT",
+    "bugs": {
+      "url": "https://github.com/agsayyed/ags-base/issues"
+    },
+    "homepage": "",
+    "devDependencies": {
+      "prettier-plugin-go-template": "^0.0.15"
+    }
+  }
