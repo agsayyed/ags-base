@@ -173,7 +173,8 @@ image_height = 240
 
 ### Adding Prettierrc file
 
-- Using npm i prettier-plugin-go-template, the prettierrc file is created.
+- Using `npm i` install prettier-plugin-go-template, it is present in package.json file.
+- Create prettierrc file with following contents.
 
 ```json
 {
@@ -189,11 +190,15 @@ image_height = 240
     }
   ]
 }
-```
+
+
 
 [//]: # 'Done!'
 
+
 ---
+
+[//]: # '! Start from this point'
 
 ### Example: Creating a Shortcode
 
