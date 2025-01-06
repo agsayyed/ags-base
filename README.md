@@ -193,12 +193,12 @@ image_height = 240
 
 
 
-[//]: # 'Done!'
+[//]: # (Done!)
 
 
 ---
 
-[//]: # '! Start from this point'
+[//]: # (! Start from this point)
 
 ### Example: Creating a Shortcode
 
