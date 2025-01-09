@@ -1,13 +1,13 @@
 {
-    "name": "hugo-base-module",
+    "name": "ags-module-template",
     "repository": {
       "type": "git",
-      "url": "git+https://github.com/agsayyed/ags-base.git"
+      "url": "git+https://github.com/agsayyed/ags-module-template.git"
     },
     "author": "Abdul Sayyed <s.ghafoor@outlook.com>",
     "license": "MIT",
     "bugs": {
-      "url": "https://github.com/agsayyed/ags-base/issues"
+      "url": "https://github.com/agsayyed/ags-module-template/issues"
     },
     "homepage": "",
     "devDependencies": {

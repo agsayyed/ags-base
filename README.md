@@ -1,17 +1,15 @@
-# Creating Hugo module
+ags-module-template# Creating Hugo Module Devloping and Testing Template (1.)
 
 - This folder and Readme.md is intended to create a base setup for creating hugo modules.
 - It is pushed onto github under organisation named `agsayyed`.
-- When new module needs to be created, it is created under the organisation `agsayyed`. And the module is named as `ags-module-name`.
+- When new module needs to be created, it is created under the organisation `agsayyed`. And the module is named as `ags-mcq-module`.
 - Keep updating and correcting the readme file as you go along the process of creating the module.
 - To start with clone this repository and start creating the module.
-- The folder name is changed from `ags-base` to `ags-base-template`
+- The folder name is changed from `ags-base` to `ags-base-template` and again changed to `ags-module-template` to make it more generic.
 
-## Part 1: Developing Your First Hugo Module (ags-base)
 
-- creating a Hugo module named `ags-base`. This module will provide foundational functionality (in a real-world scenario, this could be custom shortcodes, partials, or helper functions).
 
-### Setting Up the Development Environment
+## Setting Up the Development Environment
 
 - Prerequisites:
   - Go: Ensure Go is installed and configured on your system.
@@ -19,12 +17,12 @@
   - Git: Git should be installed and configured for version control.
   - GitHub Account: You'll need a GitHub account to host your module.
 
-- Directory Structure for `ags-base`
+- Directory Structure for `ags-module-template`
 
-Here's the recommended directory structure for your `ags-base` module:
+Here's the recommended directory structure for your `ags-module-template` module:
 
 ```bash
-ags-base/
+ags-module-template/
 ├── .github/                 # For GitHub Actions (optional)
 │   └── workflows/
 │       └── release.yml
@@ -58,29 +56,29 @@ ags-base/
 - To create this structure these commands are run:
 
 ```bash
-mkdir -p ags-base/.github/workflows
-mkdir -p ags-base/assets
-mkdir -p ags-base/assets/ags/js
-mkdir -p ags-base/assets/ags/scss
-mkdir -p ags-base/assets/images
-mkdir -p ags-base/data
-mkdir -p ags-base/i18n
-mkdir -p ags-base/layouts/partials/ags/base
-mkdir -p ags-base/layouts/shortcodes/ags/base
+mkdir -p ags-module-template/.github/workflows
+mkdir -p ags-module-template/assets
+mkdir -p ags-module-template/assets/ags/js
+mkdir -p ags-module-template/assets/ags/scss
+mkdir -p ags-module-template/assets/images
+mkdir -p ags-module-template/data
+mkdir -p ags-module-template/i18n
+mkdir -p ags-module-template/layouts/partials/ags/base
+mkdir -p ags-module-template/layouts/shortcodes/ags/base
 
-touch ags-base/.github/workflows/release.yml
-touch ags-base/layouts/partials/ags/base/head.html
-touch ags-base/layouts/shortcodes/ags/base/alert.html
-touch ags-base/assets/ags/js/index.ts
-touch ags-base/assets/ags/scss/index.scss
-touch ags-base/assets/ags/scss/variables.tmpl.scss
-touch ags-base/go.mod
-touch ags-base/go.sum
-touch ags-base/config.toml
-touch ags-base/README.md
-touch ags-base/LICENSE
-touch ags-base/package.json
-touch ags-base/.gitignore
+touch ags-module-template/.github/workflows/release.yml
+touch ags-module-template/layouts/partials/ags/base/head.html
+touch ags-module-template/layouts/shortcodes/ags/base/alert.html
+touch ags-module-template/assets/ags/js/index.ts
+touch ags-module-template/assets/ags/scss/index.scss
+touch ags-module-template/assets/ags/scss/variables.tmpl.scss
+touch ags-module-template/go.mod
+touch ags-module-template/go.sum
+touch ags-module-template/config.toml
+touch ags-module-template/README.md
+touch ags-module-template/LICENSE
+touch ags-module-template/package.json
+touch ags-module-template/.gitignore
 ```
 
 ### How to organise the modules
@@ -105,18 +103,18 @@ github.com/hbstack/blog/modules/sidebar/taxonomies v0.5.0 // indirect
 github.com/hbstack/blog/modules/toc-scrollspy v0.2.0 // indirect
 ```
 
-### Initializing the `ags-base` Module
+### Initializing the `ags-module-template` Module
 
 - Initialize the Go module:
 
 ```bash
-go mod init github.com/agsayyed/ags-base
+go mod init github.com/agsayyed/ags-module-template
 ```
 
 This creates a `go.mod` file, which will look like this:
 
 ```bash
-module github.com/agsayyed/ags-base
+module github.com/agsayyed/ags-module-template
 go 1.20
 ```
 
@@ -134,12 +132,12 @@ go 1.20
   "name": "hugo-base-module",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/agsayyed/ags-base.git"
+    "url": "git+https://github.com/agsayyed/ags-module-template.git"
   },
   "author": "Abdul Sayyed <s.ghafoor@outlook.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/agsayyed/ags-base/issues"
+    "url": "https://github.com/agsayyed/ags-module-template/issues"
   },
   "homepage": "",
   "devDependencies": {
@@ -231,7 +229,7 @@ You can create custom partials in a similar way within the `layouts/partials` di
 
 - Module Configuration (config.toml - Optional)
 
-You can provide default configuration options for your module in a `config.toml` file at the root of your module. For `ags-base`, it's optional, but here's an example if you wanted to set a default alert type:
+You can provide default configuration options for your module in a `config.toml` file at the root of your module. For `ags-module-template`, it's optional, but here's an example if you wanted to set a default alert type:
 
 ```toml
 [params]
@@ -281,13 +279,13 @@ This module is released under the MIT License.
   go mod init hugo-test-site
   ```
 
-- Step 2: Add the `ags-base` Module to Your Test Site
+- Step 2: Add the `ags-module-template` Module to Your Test Site
 
 - In your `hugo-test-site/config.toml`, add the following under the `module` section:
 
   ```toml
   [[module.imports]]
-    path = "github.com/agsayyed/ags-base"
+    path = "github.com/agsayyed/ags-module-template"
   ```
 
 - In your test site's `go.mod` file, add a `replace` directive to point to your local module:
@@ -297,7 +295,7 @@ This module is released under the MIT License.
 
   go 1.20
 
-  replace github.com/agsayyed/ags-base => ../ags-base
+  replace github.com/agsayyed/ags-module-template => ../ags-module-template
   ```
 
 - Step 3: Use the Module in Your Test Site
@@ -346,7 +344,7 @@ This module is released under the MIT License.
 
 - Step 5: Using `hugo mod` Commands
 
-  - `hugo mod get -u`: Updates the module (useful if you make changes to `ags-base`).
+  - `hugo mod get -u`: Updates the module (useful if you make changes to `ags-module-template`).
   - `hugo mod tidy`: Cleans up your `go.mod` and `go.sum` files.
   - `hugo mod vendor`: Creates a `_vendor` directory with your module's dependencies (for build reproducibility).
 
@@ -369,7 +367,7 @@ This module is released under the MIT License.
   - Write clear code: Follow Go's coding conventions and write well-documented code.
   - Modular design: Break down complex functionality into smaller, reusable components (shortcodes, partials, or even other modules).
 
-### Publishing the `ags-base` Module
+### Publishing the `ags-module-template` Module
 
 - Step 1: Prepare Your Module for GitHub
 
@@ -386,19 +384,19 @@ This module is released under the MIT License.
   - Version Tagging: Use semantic versioning (e.g., `v1.0.0`, `v1.0.1`, `v1.1.0`, `v2.0.0`) when tagging your releases. You can create tags using Git:
 
     ```bash
-    git tag -a v1.0.0 -m "Initial release of ags-base"
+    git tag -a v1.0.0 -m "Initial release of ags-module-template"
     git push origin v1.0.0
     ```
 
 - Step 2: Create a GitHub Repository
 
-  - Go to your GitHub account and create a new repository named `ags-base` (matching your module name).
+  - Go to your GitHub account and create a new repository named `ags-module-template` (matching your module name).
   - Initialize the repository with a README (you can do this directly on GitHub).
 
 - Step 3: Push Your Module to GitHub
 
   ```bash
-  git remote add origin git@github.com:agsayyed/ags-base.git
+  git remote add origin git@github.com:agsayyed/ags-module-template.git
   git branch -M main
   git push -u origin main
   ```
@@ -408,11 +406,19 @@ This module is released under the MIT License.
   - Hugo Module Proxy: Hugo uses a module proxy to fetch modules. Once your module is on GitHub and tagged, it should be automatically available through the proxy.
   - Testing: You can test if your module is accessible by adding it to a fresh Hugo site without using a `replace` directive. If Hugo can download the module successfully, it's working correctly.
 
+
+[//]: # '! First I intneded to make this folder to develop a module but changed to a `template` folder to make it more generic. The above information is for the `ags-module-template` module While below was intended for previous `ags-base` module. Correct it and followt the tod convention so that it is easy to understand.'
+
+
+---
+
+[//]: # '!Start your work from here'
+
 ### Example Code and Files
 
-You can find the complete example code for the `ags-base` module, including all the files mentioned above, in this GitHub repository:
+You can find the complete example code for the `ags-module-template` module, including all the files mentioned above, in this GitHub repository:
 
-[https://github.com/agsayyed/ags-base](https://github.com/agsayyed/ags-base)
+[https://github.com/agsayyed/ags-module-template](https://github.com/agsayyed/ags-base)
 
 ## Part 2: Developing a Dependent Module (ags-utils)
 
