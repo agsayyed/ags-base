@@ -1,4 +1,4 @@
-ags-module-template# Creating Hugo Module Devloping and Testing Template (1.)
+# Creating Hugo Module Devloping and Testing Template (1.)
 
 - This folder and Readme.md is intended to create a base setup for creating hugo modules.
 - It is pushed onto github under organisation named `agsayyed`.
